@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flutter Dev Home</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      onerror="this.onerror=null;this.href='bootstrap/bootstrap.min.css';"
+    />
+    <!-- <link rel="stylesheet" href="bootstrap/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container py-4">
+      <div class="tabs-header mb-4">
+        <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              data-bs-target="#home"
+              type="button"
+            >
+              Home
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link" data-bs-target="#ai" type="button">
+              AI Tools
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link" data-bs-target="#flutter" type="button">
+              Flutter Dev
+            </button>
+          </li>
+        </ul>
+
+        <div class="clock-box text-end">
+          <div id="clock" class="clock"></div>
+          <div id="greeting" class="greeting"></div>
+        </div>
+      </div>
+
+      <div class="tab-content">
+        <!-- HOME -->
+        <div class="tab-pane show active" id="home">
+          <div class="search-box mb-5">
+            <form action="https://www.google.com/search">
+              <input
+                class="form-control form-control-lg rounded-pill"
+                name="q"
+                placeholder="Search"
+              />
+            </form>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-8">
+              <div class="card-glass p-4">
+                <h4>Frequently Visited</h4>
+                <div class="topsites-grid mt-3" id="topsites"></div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card-glass p-3 mb-4">
+                <h5>Recent History</h5>
+                <div id="history"></div>
+              </div>
+
+              <div class="card-glass p-3">
+                <h5>Notes</h5>
+                <textarea id="notes" class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI TAB -->
+        <div class="tab-pane" id="ai">
+          <div class="row g-4">
+            <!-- ChatGPT -->
+            <div class="col-md-3">
+              <a href="https://chat.openai.com" class="tile-pro">
+                <div class="tile-icon">🤖</div>
+                <div class="tile-title">ChatGPT</div>
+                <div class="tile-desc">
+                  Conversational AI for coding, writing, and problem solving
+                </div>
+              </a>
+            </div>
+
+            <!-- Claude -->
+            <div class="col-md-3">
+              <a href="https://claude.ai" class="tile-pro">
+                <div class="tile-icon">🧠</div>
+                <div class="tile-title">Claude</div>
+                <div class="tile-desc">
+                  Long-context AI assistant for documents and reasoning
+                </div>
+              </a>
+            </div>
+
+            <!-- Gemini -->
+            <div class="col-md-3">
+              <a href="https://gemini.google.com" class="tile-pro">
+                <div class="tile-icon">✨</div>
+                <div class="tile-title">Gemini</div>
+                <div class="tile-desc">
+                  Google AI for search, multimodal tasks, and productivity
+                </div>
+              </a>
+            </div>
+
+            <!-- Cursor -->
+            <div class="col-md-3">
+              <a href="https://cursor.sh" class="tile-pro">
+                <div class="tile-icon">💻</div>
+                <div class="tile-title">Cursor</div>
+                <div class="tile-desc">
+                  AI-powered code editor with deep codebase understanding
+                </div>
+              </a>
+            </div>
+
+            <!-- Bolt -->
+            <div class="col-md-3">
+              <a href="https://bolt.new" class="tile-pro">
+                <div class="tile-icon">⚡</div>
+                <div class="tile-title">Bolt</div>
+                <div class="tile-desc">
+                  Instant full-stack app generation using AI
+                </div>
+              </a>
+            </div>
+
+            <!-- Perplexity -->
+            <div class="col-md-3">
+              <a href="https://perplexity.ai" class="tile-pro">
+                <div class="tile-icon">🔎</div>
+                <div class="tile-title">Perplexity</div>
+                <div class="tile-desc">
+                  AI search engine with cited, real-time answers
+                </div>
+              </a>
+            </div>
+
+            <!-- Phind -->
+            <div class="col-md-3">
+              <a href="https://phind.com" class="tile-pro">
+                <div class="tile-icon">📚</div>
+                <div class="tile-title">Phind</div>
+                <div class="tile-desc">
+                  Developer-focused AI search and coding assistant
+                </div>
+              </a>
+            </div>
+
+            <!-- v0 -->
+            <div class="col-md-3">
+              <a href="https://v0.dev" class="tile-pro">
+                <div class="tile-icon">🎨</div>
+                <div class="tile-title">v0</div>
+                <div class="tile-desc">
+                  Generate UI components from prompts (by Vercel)
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLUTTER TAB -->
+        <div class="tab-pane" id="flutter">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <a href="https://pub.dev" class="tile">📦 Pub</a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://docs.flutter.dev" class="tile">📘 Docs</a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://dartpad.dev" class="tile">🧪 DartPad</a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://firebase.google.com" class="tile">🔥 Firebase</a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="https://supabase.com" class="tile">🟢 Supabase</a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://material.io" class="tile">🎨 Material</a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://github.com" class="tile">🐙 GitHub</a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://stackoverflow.com" class="tile"
+                >💬 StackOverflow</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      onerror="this.onerror=null;this.src='bootstrap/bootstrap.bundle.min.js';"
+    ></script>
+    <!-- <script src="bootstrap/bootstrap.bundle.min.js"></script> -->
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

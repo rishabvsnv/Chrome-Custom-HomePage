@@ -1,0 +1,202 @@
+body {
+  background: radial-gradient(circle at 20% 20%, #1b2a3a, #0f1720);
+  color: white;
+  font-family: Inter, system-ui;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.nav-tabs {
+  border: none;
+  gap: 10px;
+}
+
+.nav-tabs button {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.nav-tabs button.active {
+  background: linear-gradient(135deg, #6366f1, #22c55e);
+  color: white;
+}
+
+.tile {
+  display: block;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+.top-tile {
+  display: block;
+  height: 120px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  text-decoration: none;
+  color: white;
+  transition: .25s;
+}
+
+.top-tile:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.12);
+}
+
+.top-tile img {
+  width: 26px;
+  margin-bottom: 8px;
+}
+
+.top-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  height: 34px;
+  overflow: hidden;
+}
+
+.top-domain {
+  font-size: 12px;
+  opacity: .6;
+}
+
+.topsites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.tabs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clock-box {
+  min-width: 180px;
+}
+
+.clock {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.greeting {
+  font-size: 13px;
+  opacity: .7;
+}
+
+/* HISTORY LIST */
+
+#history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each item */
+.history-item {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Remove blue underline */
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+/* Icon */
+.history-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Text container */
+.history-text {
+  overflow: hidden;
+}
+
+/* Title */
+.history-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Domain */
+.history-domain {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* PROFESSIONAL TILE */
+
+.tile-pro {
+  display: block;
+  text-decoration: none;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  height: 100%;
+  transition: all 0.25s ease;
+  color: #fff;
+}
+
+/* Hover effect */
+.tile-pro:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+/* Icon */
+.tile-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.tile-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Description */
+.tile-desc {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.4;
+}
