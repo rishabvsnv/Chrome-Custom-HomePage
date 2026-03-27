@@ -52,18 +52,24 @@
       <div class="tab-content">
         <!-- HOME -->
         <div class="tab-pane show active" id="home">
-          <div class="search-box mb-5">
-            <form action="https://www.google.com/search">
+          <div class="search-wrap mb-5">
+            <form action="https://www.google.com/search" class="search-form">
+              <span class="search-icon">🔍</span>
               <input
-                class="form-control form-control-lg rounded-pill"
                 name="q"
-                placeholder="Search"
+                placeholder="Search anything..."
+                autocomplete="off"
               />
+              <span class="search-hint">Enter ↵</span>
             </form>
           </div>
 
           <div class="row g-4">
             <div class="col-md-8">
+              <!-- <div class="card-glass p-3 mb-4">
+                <h5>Weather</h5>
+                <div id="weather">Loading...</div>
+              </div> -->
               <div class="card-glass p-4">
                 <h4>Frequently Visited</h4>
                 <div class="topsites-grid mt-3" id="topsites"></div>
@@ -76,9 +82,18 @@
                 <div id="history"></div>
               </div>
 
-              <div class="card-glass p-3">
-                <h5>Notes</h5>
-                <textarea id="notes" class="form-control" rows="6"></textarea>
+              <div class="card-glass p-3 notes-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h5 class="mb-0">Notes</h5>
+                  <span id="saveStatus" class="notes-status">Saved</span>
+                </div>
+
+                <textarea
+                  id="notes"
+                  class="notes-input"
+                  placeholder="Write something..."
+                  rows="6"
+                ></textarea>
               </div>
             </div>
           </div>

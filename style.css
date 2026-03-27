@@ -1,3 +1,7 @@
+* {
+  transition: all 0.25s ease;
+}
+
 body {
   background: radial-gradient(circle at 20% 20%, #1b2a3a, #0f1720);
   color: white;
@@ -9,11 +13,13 @@ body {
 }
 
 .card-glass {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .nav-tabs {
@@ -48,6 +54,11 @@ body {
 .tile:hover {
   transform: translateY(-6px);
   background: rgba(255, 255, 255, 0.12);
+}
+
+.tile-pro:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 
@@ -199,4 +210,94 @@ body {
   font-size: 13px;
   color: #aaa;
   line-height: 1.4;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 16px 50px 16px 50px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-form input::placeholder {
+  color: #94a3b8;
+}
+
+.search-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+.search-hint {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.search-wrap {
+  /* margin-top: 80px; */
+  text-align: center;
+}
+
+.search-form input {
+  font-size: 18px;
+  padding: 18px 60px;
+  border-radius: 40px;
+}
+
+.notes-card {
+  position: relative;
+}
+
+.notes-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(255,255,255,0.04);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.notes-input::placeholder {
+  color: #94a3b8;
+}
+
+.notes-input:focus {
+  background: rgba(255,255,255,0.08);
+}
+
+.notes-status {
+  font-size: 12px;
+  opacity: 0.6;
 }
