@@ -278,6 +278,7 @@ body {
 
 .notes-input {
   width: 100%;
+  min-height: 120px;
   border: none;
   outline: none;
   resize: none;
@@ -300,4 +301,15 @@ body {
 .notes-status {
   font-size: 12px;
   opacity: 0.6;
+}
+
+/* Neural network animation */
+#neuralCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
 }
